@@ -1,69 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Josh Barton</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Josh Barton Portfolio</title>
 </head>
-
 <body>
-  <header>
-    <h1>Josh Barton Portfolio</h1>
-    <p>Showcasing My Skills and Projects</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        My name is Josh Barton and I'm currently a graduate student at the University of Utah getting my Master of Software Development degree.
-        I love learning new technologies and creating programs that enhance people's lives. I love tackling new challenges everyday, collaborating and contributing
-        to a team, and using my imagination to create new solutions to a variety of problems.  
-      </p>
-    </section>
+  <div id="container">
+    <div id="left-column">
+        <h1>Josh Barton</h1>
+        <hr>
+        <ul>
+            <li><a href="#" onclick="showContent('Projects')">1. Projects</a></li>
+            <li><a href="#" onclick="showContent('About')">2. About</a></li>
+            <li><a href="#" onclick="showContent('Resume')">3. Resume</a></li>
+            <li><a href="#" onclick="showContent('Contact')">4. Contact</a></li>
+        </ul>
+    </div>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>C++</li>
-        <!-- Add more skills as needed -->
-      </ul>
-    </section>
+    <div id="right-column">
+        <div id="content">
+            <!-- Content for each page will be dynamically loaded here -->
+        </div>
+    </div>
+  </div>
 
-    <section>
-      <h2>Projects</h2>
-      <!-- Showcase your projects here with images, descriptions, and links -->
-      <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>WebChat Server</h3>
-        <p>Description of Project 1.
-          I created a basic WebChat server that allows users to communicate online. I created a back-end server that receives Web Socket requests, decodes them, and sends 
-          the response to the appropriate user. I created the front-end HTML, CSS, and JavaScript files to accomodate the user experience.  
-        </p>
-        <a href="#">View Project</a>
-      </div>
-
-      <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>For The Skiers</h3>
-        <p>For the skiers was a project I created to enhance my HTML, CSS, and JavaScript skills. </p>
-        <a href="#">For The Skiers</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>Contact: joshuabarton222@gmail.com</p>
-    <!-- Add social media links if desired -->
-  </footer>
-
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
