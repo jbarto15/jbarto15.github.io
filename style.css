@@ -11,14 +11,25 @@ body {
 
 #container {
     display: flex;
+    /*new*/
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #left-column {
-    width: 20%;
+    /* width: 20%;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f0f0f0; */
+
+    /*new*/
+    width: 100%; /* Full width on smaller screens */
+    min-height: 100%;
+    position: relative; /* Remove fixed positioning */
     overflow-y: auto;
     padding: 20px;
     background-color: #f0f0f0;
@@ -52,14 +63,18 @@ body {
 }
 
 #right-column {
-    flex-grow: 1;
+    /* flex-grow: 1;
     overflow-y: auto;
     padding: 20px;
     margin-left: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+
+    /*new*/
+    width: 100%; /* Full width on smaller screens */
+    margin-left: 0; /* Remove margin on smaller screens */
 }
 
 #content {
@@ -85,10 +100,37 @@ body {
 }
 
 #headshotpic {
-    width: 45%;
+    /* width: 45%;
+    height: auto; */
+
+    /*new*/
+    width: 100%;
     height: auto;
 }
 
 .menu h2 {
     text-align: center;
+}
+
+
+/*all new*/
+@media only screen and (min-width: 600px) {
+    /* Additional styles for screens with a minimum width of 600px */
+    #container {
+        flex-direction: row; /* Display columns side by side on larger screens */
+    }
+
+    #left-column {
+        width: 20%; /* Adjust width for larger screens if needed */
+        position: fixed;
+    }
+
+    #right-column {
+        width: 80%; /* Adjust width for larger screens if needed */
+        margin-left: 20%;
+    }
+
+    #headshotpic {
+        width: 45%; /* Adjust width for larger screens if needed */
+    }
 }
