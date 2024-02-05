@@ -134,3 +134,8 @@ body {
         width: 45%; /* Adjust width for larger screens if needed */
     }
 }
+
+p {
+    font-size: small;
+    text-align: left;
+}
