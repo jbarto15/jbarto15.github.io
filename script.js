@@ -1,20 +1,28 @@
-// function showContent(pageNumber) {
-//     // You can fetch content for each page dynamically or load it from predefined HTML files
-//     // For simplicity, let's assume we have some content for each page
-//     const pageContents = [
-//         "<h2>Page 1 Content</h2><p>Description for Page 1.</p>",
-//         "<h2>Page 2 Content</h2><p>Description for Page 2.</p>",
-//         "<h2>Page 3 Content</h2><p>Description for Page 3.</p>",
-//         "<h2>Page 4 Content</h2><p>Description for Page 4.</p>",
-//     ];
 
-//     // Display the selected page content in the right column
-//     document.getElementById("content").innerHTML = pageContents[pageNumber - 1];
-// }
+// Function to fetch and load initial content (about.html)
+function loadInitialContent() {
+    fetch('content/about.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching initial content:', error));
+}
+
+// Call the function to load initial content when the page is first loaded
+document.addEventListener('DOMContentLoaded', loadInitialContent);
 
 
 async function showContent(pageName) {
     try {
+        // Remove "active" class from all links
+        document.querySelectorAll('#left-column a').forEach(link => {
+        link.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked link
+        event.target.classList.add('active');
+        
         // Simulate fetching content from a server (replace with actual server request)
         const response = await fetch(`content/${pageName}.html`);
         const content = await response.text();

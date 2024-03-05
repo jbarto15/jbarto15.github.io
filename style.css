@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'JetBrainsMono-Regular';
     src: url('fonts/JetBrainsMono-Regular.ttf') format('truetype');
-    /* Add more file formats if necessary */
   }
 
 body {
@@ -17,16 +16,6 @@ body {
 }
 
 #left-column {
-    /* width: 20%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-    padding: 20px;
-    background-color: #f0f0f0; */
-
-    /*new*/
     width: 100%; /* Full width on smaller screens */
     min-height: 100%;
     position: relative; /* Remove fixed positioning */
@@ -62,17 +51,11 @@ body {
     color: #007bff;
 }
 
-#right-column {
-    /* flex-grow: 1;
-    overflow-y: auto;
-    padding: 20px;
-    margin-left: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+#left-column a.active {
+    color: #007bff;
+}
 
-    /*new*/
+#right-column {
     width: 100%; /* Full width on smaller screens */
     margin-left: 0; /* Remove margin on smaller screens */
 }
@@ -81,8 +64,6 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
-
-/* Add more styles as needed */
 
 /* Additional styling to make it visually appealing */
 
@@ -100,10 +81,6 @@ body {
 }
 
 #headshotpic {
-    /* width: 45%;
-    height: auto; */
-
-    /*new*/
     width: 100%;
     height: auto;
 }
@@ -139,3 +116,21 @@ p {
     font-size: medium;
     text-align: left;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
